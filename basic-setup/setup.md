@@ -28,9 +28,7 @@ Here is a list of things that will be used:
 
 Lastly for this section we will be following this topology:
 
-```
-![topology map](./topology.png)
-```
+![topology map](https://github.com/alexh200/blue-team-homelab/blob/main/basic-setup/topology.png?raw=true)
 
 **Corporate Network** (<u>VLAN 1</u>) - This represents the LAN for a corporate network and only has access to the simulated internet. User workstations and company servers run here.
 
