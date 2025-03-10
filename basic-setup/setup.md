@@ -10,7 +10,7 @@ In terms of hardware, this will all be dependent on how many different VMs you w
 * 32GB of RAM
 * As much storage as I have available!
 
-Purchasing older hardware second-hand could be a good option to get things up and running. In general, CPU compute (particularly core/thread count), RAM, and storage will be the most important factors as to how your network will perform and how many VMs you can run simultaneously. 
+Purchasing older hardware second-hand could be a good option to get things up and running. In general CPU compute (particularly core/thread count), RAM, and storage will be the most important factors as to how your network will perform and how many VMs you can run simultaneously. 
 
 ------
 
