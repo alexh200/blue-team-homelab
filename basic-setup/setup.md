@@ -18,9 +18,9 @@ Purchasing older hardware second-hand could be a good option to get things up an
 
 Here is a list of things that will be used:
 
-<u>VMWare Workstation</u>: To setup all of the virtual machines, I will be using VMware Workstation. There are other options like VirtualBox and Windows Hyper-V, but for now I will stick with VMware.  
+1. <u>VMWare Workstation</u>: To setup all of the virtual machines, I will be using VMware Workstation. There are other options like VirtualBox and Windows Hyper-V, but for now I will stick with VMware.  
 
-<u>Virtual Machines</u>: As of writing this first section, the different VMs that will be used will be a mixture of Windows & Linux. Eventually I'd like to have different services running on a variety of different machines in the network and have an external Kali VM that will be used to create traffic and generate alerts. For this first section we can just focus on Windows hosts such as Win10/11, Windows Server, pfSense for our firewall, and a couple of Linux hosts such as Ubuntu and Fedora.  
+2. <u>Virtual Machines</u>: As of writing this first section, the different VMs that will be used will be a mixture of Windows & Linux. Eventually I'd like to have different services running on a variety of different machines in the network and have an external Kali VM that will be used to create traffic and generate alerts. For this first section we can just focus on Windows hosts such as Win10/11, Windows Server, pfSense for our firewall, and a couple of Linux hosts such as Ubuntu and Fedora.  
 
 ------
 
