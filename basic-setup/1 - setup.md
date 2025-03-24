@@ -39,3 +39,19 @@ Lastly for this section we will be following this topology:
 **Management Network** (<u>VLAN 30</u>) - This will be used to configure critical security infrastructure.
 
 Shoutout to @facyber for the inspiration on the topology! (https://facyber.me/posts/blue-team-lab-guide-part-1/)
+
+To create these VLANs in our virtual network, we will be creating networks within VMware workstation (or whatever hypervisor you are using). To do this in VMware:
+
+1. Edit -> Virtual Network Editor -> Change Settings (might have to provide admin credentials).
+
+2. Here we will add 4 networks and name them accordingly (I had to rename some once they were added):
+
+   * vmnet1 (**Subnet Address**: <u>10.0.1.0</u>) - Management (*VLAN 1*)
+   * vmnet10 (**Subnet Address**: <u>10.0.10.0</u>) - Corporate Network (*VLAN 10*)
+   * vmnet20 (**Subnet Address**: <u>10.0.20.0</u>) - Corporate Security (*VLAN 20*)
+   * vmnet30 (**Subnet Address**: <u>10.0.30.0</u>) - Hacker Network (*VLAN 30*)
+
+
+   Make sure that all of these are set to host-only as we want to create our own virtual private network. We also want to uncheck use local DHCP service since we will have a DHCP server on our firewall and a windows server machine that will handle ip addressing. This is what our current configuration should look like:
+
+   ![virtual network editor](https://github.com/alexh200/blue-team-homelab/blob/main/basic-setup/network_editor.png?raw=true)
