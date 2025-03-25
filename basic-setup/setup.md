@@ -30,15 +30,15 @@ Lastly for this section we will be following this topology:
 
 ![topology map](https://github.com/alexh200/blue-team-homelab/blob/main/basic-setup/topology.png?raw=true)
 
-**Corporate Network** (<u>VLAN 1</u>) - This represents the LAN for a corporate network and only has access to the simulated internet. User workstations and company servers run here.
+**Management Network** (<u>VLAN 1</u>) - This will be used to configure critical security infrastructure.
 
-**Corporate Security** (<u>VLAN 1</u>0) - This represents a security team working at the organization to retrieve logs. Notice that the security network has access to the corporate network but not the other way around. We will allow this network to have access to the actual internet for various things.
+**Corporate Network** (<u>VLAN 1</u>0) - This represents the LAN for a corporate network and only has access to the simulated internet. User workstations and company servers run here.
 
-**Hacker Network** (<u>VLAN 20</u>) - This represents bad actors from the internet trying to breach and gain access to the corporate network.
+**Corporate Security** (<u>VLAN 20</u>) - This represents a security team working at the organization to retrieve logs. Notice that the security network has access to the corporate network but not the other way around. We will allow this network to have access to the actual internet for various things.
 
-**Management Network** (<u>VLAN 30</u>) - This will be used to configure critical security infrastructure.
+**Hacker Network** (<u>VLAN 30</u>) - This represents bad actors from the internet trying to breach and gain access to the corporate network.
 
-Shoutout to @facyber for the inspiration on the topology! (https://facyber.me/posts/blue-team-lab-guide-part-1/)
+Shoutout to <u>@facyber</u> for the inspiration on the topology! (https://facyber.me/posts/blue-team-lab-guide-part-1/)
 
 To create these VLANs in our virtual network, we will be creating networks within VMware workstation (or whatever hypervisor you are using). To do this in VMware:
 

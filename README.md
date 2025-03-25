@@ -31,7 +31,8 @@ By **building, configuring, and securing** a fully networked environment, this l
 
 ## 🚀 **Sections**
 
-1. [**Basic Setup**](https://github.com/alexh200/blue-team-homelab/tree/main/basic-setup/basic_setup.md)
+1. [**Basic Setup**](https://github.com/alexh200/blue-team-homelab/tree/main/basic-setup/setup.md)
+1. [**Firewall Setup**](https://github.com/alexh200/blue-team-homelab/tree/main/firewall-setup/firewall.md)
 
 ------
 
