@@ -19,7 +19,7 @@ By **building, configuring, and securing** a fully networked environment, this l
 
 ------
 
-## <phase1><summary>🛠️ Blue Team Homelab Setup Checklist (Phase 1)
+## <details><summary>🛠️ Blue Team Homelab Setup Checklist (Phase 1)</summary>
 
 ## 🔧 Infrastructure Setup
 ✅Configure VLANs + Firewall
@@ -75,9 +75,9 @@ By **building, configuring, and securing** a fully networked environment, this l
   - [ ] Top processes
   - [ ] Alerts by severity
 - [ ] Build custom detection rules in Wazuh
-- [ ] Link rules to techniques</summary></phase1>
+- [ ] Link rules to techniques</details>
 
-# <phase2><summary>Skill Expansion & Tool Exploration (Phase 2)
+## <details><summary>Skill Expansion & Tool Exploration (Phase 2)</summary>
 
 ## 🔹 Splunk SIEM (Free Tier)
 - [ ] Deploy Splunk Free Edition (500MB/day)
@@ -115,7 +115,7 @@ By **building, configuring, and securing** a fully networked environment, this l
   - [ ] Trigger method
   - [ ] Log source
   - [ ] Tool used (Wazuh, Splunk, etc.)
-  - [ ] MITRE ID</summary></phase2>
+  - [ ] MITRE ID</details>
 
 ------
 
