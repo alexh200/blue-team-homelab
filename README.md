@@ -19,112 +19,121 @@ By **building, configuring, and securing** a fully networked environment, this l
 
 ------
 
-## <details>
+- <details>
+  <summary>🛠️ Blue Team Homelab Setup Checklist (Phase 1)</summary>
 
-## <summary>🛠️ Blue Team Homelab Setup Checklist (Phase 1)</summary>
+  ### 🔧 Infrastructure Setup
 
-## 🔧 Infrastructure Setup
-✅Configure VLANs + Firewall
+  - ✅ Configure VLANs + Firewall  
+  - [ ] Deploy Windows Server  
+  - [ ] Configure Active Directory Domain  
+  - [ ] Set up DNS & optionally DHCP  
+  - [ ] Create AD users  
 
-- [ ] Deploy Windows Server
-- [ ] Configure Active Directory Domain
-- [ ] Set up DNS & optionally DHCP
-- [ ] Create AD users
+  ### 🖥️ Endpoint Deployment
 
-## 🖥️ Endpoint Deployment
-- [ ] Deploy Windows 10/11 Workstations
-- [ ] Join to Domain
-- [ ] Create user sessions, simulate real usage
-- [ ] Install Sysmon + SwiftOnSecurity config
+  - [ ] Deploy Windows 10/11 Workstations  
+  - [ ] Join to Domain  
+  - [ ] Create user sessions, simulate real usage  
+  - [ ] Install Sysmon + SwiftOnSecurity config  
 
-## 🔐 SIEM (Wazuh) Setup
-- [ ] Deploy Linux VM (Ubuntu recommended)
-- [ ] Install Wazuh Stack (Wazuh Manager, Elasticsearch, Kibana, Filebeat)
-- [ ] Open ports in firewall
-- [ ] Access Wazuh Dashboard via browser
+  ### 🔐 SIEM (Wazuh) Setup
 
-## 🔗 Agent Deployment
-- [ ] Install Wazuh agent on Windows Server
-- [ ] Install agent on all Windows clients
-- [ ] Register agents with Wazuh Manager
-- [ ] Confirm logs received
+  - [ ] Deploy Linux VM (Ubuntu recommended)  
+  - [ ] Install Wazuh Stack (Wazuh Manager, Elasticsearch, Kibana, Filebeat)  
+  - [ ] Open ports in firewall  
+  - [ ] Access Wazuh Dashboard via browser  
 
-## 🔎 Log Collection Validation
-- [ ] View EventLogs, Sysmon events in Wazuh UI
-- [ ] Simulate:
-  - [ ] Failed logins
-  - [ ] PowerShell execution
-  - [ ] RDP usage
-- [ ] Confirm rules fired, alerts generated
+  ### 🔗 Agent Deployment
 
-## 🌐 Network Visibility
-- [ ] Deploy Suricata or Zeek on dedicated VM
-- [ ] Mirror VLAN traffic to sensor (if possible)
-- [ ] Send logs to Wazuh via Filebeat
+  - [ ] Install Wazuh agent on Windows Server  
+  - [ ] Install agent on all Windows clients  
+  - [ ] Register agents with Wazuh Manager  
+  - [ ] Confirm logs received  
 
-## 💥 Threat Simulation & Detection
-- [ ] Install Atomic Red Team on a test endpoint
-- [ ] Run:
-  - [ ] T1059 – PowerShell execution
-  - [ ] T1110 – Brute-force attempt
-  - [ ] T1055 – Process injection
-- [ ] Confirm alerts appear in Wazuh
-- [ ] Analyze rules, tag with MITRE ATT&CK
+  ### 🔎 Log Collection Validation
 
-## 📊 Dashboarding & Alerting
-- [ ] Create Kibana dashboards:
-  - [ ] Failed logins
-  - [ ] Top processes
-  - [ ] Alerts by severity
-- [ ] Build custom detection rules in Wazuh
-- [ ] Link rules to techniques
+  - [ ] View EventLogs, Sysmon events in Wazuh UI  
+  - [ ] Simulate:  
+    - [ ] Failed logins  
+    - [ ] PowerShell execution  
+    - [ ] RDP usage  
+  - [ ] Confirm rules fired, alerts generated  
 
-</details>
+  ### 🌐 Network Visibility
 
-## <details>
+  - [ ] Deploy Suricata or Zeek on dedicated VM  
+  - [ ] Mirror VLAN traffic to sensor (if possible)  
+  - [ ] Send logs to Wazuh via Filebeat  
 
-## <summary>Skill Expansion & Tool Exploration (Phase 2)</summary>
+  ### 💥 Threat Simulation & Detection
 
-## 🔹 Splunk SIEM (Free Tier)
-- [ ] Deploy Splunk Free Edition (500MB/day)
-- [ ] Forward logs from one Windows client
-- [ ] Practice SPL (Search Processing Language)
-- [ ] Replicate Wazuh detections in Splunk
-- [ ] Create basic dashboards and alerts
+  - [ ] Install Atomic Red Team on a test endpoint  
+  - [ ] Run:  
+    - [ ] T1059 – PowerShell execution  
+    - [ ] T1110 – Brute-force attempt  
+    - [ ] T1055 – Process injection  
+  - [ ] Confirm alerts appear in Wazuh  
+  - [ ] Analyze rules, tag with MITRE ATT&CK  
 
-## 🔹 ELK Stack (Standalone)
-- [ ] Deploy vanilla ELK (Elasticsearch + Logstash + Kibana)
-- [ ] Forward logs from endpoints or test logs
-- [ ] Create custom ingestion pipelines with Logstash
-- [ ] Visualize data in Kibana
-- [ ] Compare ELK with Wazuh experience
+  ### 📊 Dashboarding & Alerting
 
-## 🔹 Zeek (Bro) Network Monitoring
-- [ ] Install Zeek on a sensor VM
-- [ ] Send VLAN traffic via mirror or tap interface
-- [ ] Analyze:
-  - [ ] DNS logs
-  - [ ] HTTP logs
-  - [ ] SSL, SSH activity
-- [ ] Forward Zeek logs to ELK or Wazuh
+  - [ ] Create Kibana dashboards:  
+    - [ ] Failed logins  
+    - [ ] Top processes  
+    - [ ] Alerts by severity  
+  - [ ] Build custom detection rules in Wazuh  
+  - [ ] Link rules to techniques  
 
-## 🔹 Advanced Threat Simulation
-- [ ] Use MITRE Caldera for red team automation
-- [ ] Write detection rules based on Caldera activity
-- [ ] Map alerts to MITRE ATT&CK Navigator
+  </details>
 
-## 🔹 Detection Engineering Practice
-- [ ] Write Sigma rules based on log observations
 
-- [ ] Convert Sigma to Wazuh/Splunk detection syntax
+  <details>
+  <summary>🧠 Skill Expansion & Tool Exploration (Phase 2)</summary>
 
-- [ ] Build a “Detection Catalog” in GitHub
-  - [ ] Detection name
-  - [ ] Trigger method
-  - [ ] Log source
-  - [ ] Tool used (Wazuh, Splunk, etc.)
-  - [ ] MITRE ID
-  
+  ### 🔹 Splunk SIEM (Free Tier)
+
+  - [ ] Deploy Splunk Free Edition (500MB/day)  
+  - [ ] Forward logs from one Windows client  
+  - [ ] Practice SPL (Search Processing Language)  
+  - [ ] Replicate Wazuh detections in Splunk  
+  - [ ] Create basic dashboards and alerts  
+
+  ### 🔹 ELK Stack (Standalone)
+
+  - [ ] Deploy vanilla ELK (Elasticsearch + Logstash + Kibana)  
+  - [ ] Forward logs from endpoints or test logs  
+  - [ ] Create custom ingestion pipelines with Logstash  
+  - [ ] Visualize data in Kibana  
+  - [ ] Compare ELK with Wazuh experience  
+
+  ### 🔹 Zeek (Bro) Network Monitoring
+
+  - [ ] Install Zeek on a sensor VM  
+  - [ ] Send VLAN traffic via mirror or tap interface  
+  - [ ] Analyze:  
+    - [ ] DNS logs  
+    - [ ] HTTP logs  
+    - [ ] SSL, SSH activity  
+  - [ ] Forward Zeek logs to ELK or Wazuh  
+
+  ### 🔹 Advanced Threat Simulation
+
+  - [ ] Use MITRE Caldera for red team automation  
+  - [ ] Write detection rules based on Caldera activity  
+  - [ ] Map alerts to MITRE ATT&CK Navigator  
+
+  ### 🔹 Detection Engineering Practice
+
+  - [ ] Write Sigma rules based on log observations  
+  - [ ] Convert Sigma to Wazuh/Splunk detection syntax  
+  - [ ] Build a “Detection Catalog” in GitHub  
+    - [ ] Detection name  
+    - [ ] Trigger method  
+    - [ ] Log source  
+    - [ ] Tool used (Wazuh, Splunk, etc.)  
+    - [ ] MITRE ID  
+
   </details>
 
 ------
