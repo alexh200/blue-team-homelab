@@ -10,12 +10,12 @@ By **building, configuring, and securing** a fully networked environment, this l
 
 ## **🎯 Project Goals**
 
-✅ **Network Simulation** – Set up a multi-machine environment mimicking a small enterprise.  
-✅ **Security Hardening** – Implement **firewalls, system configurations, and endpoint protection**.  
-✅ **Log Collection & SIEM Integration** – Forward logs to a SIEM for analysis.  
-✅ **Threat Detection** – Develop **custom detection rules** to catch malicious activity.  
-✅ **Incident Response & Forensics** – Simulate **attacks**, analyze logs, and document findings.  
-✅ **Red vs. Blue Training** – Execute **offensive techniques** and detect them using defensive tools.  
+🔹 **Network Simulation** – Set up a multi-machine environment mimicking a small enterprise.  
+🔹 **Security Hardening** – Implement **firewalls, system configurations, and endpoint protection**.  
+🔹 **Log Collection & SIEM Integration** – Forward logs to a SIEM for analysis.  
+🔹 **Threat Detection** – Develop **custom detection rules** to catch malicious activity.  
+🔹 **Incident Response & Forensics** – Simulate **attacks**, analyze logs, and document findings.  
+🔹 **Red vs. Blue Training** – Execute **offensive techniques** and detect them using defensive tools.  
 
 ------
 
