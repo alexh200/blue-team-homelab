@@ -23,6 +23,7 @@ By **building, configuring, and securing** a fully networked environment, this l
 
 <details>
     <summary>Click to expand</summary>
+
 ✅ Configure VLANs + Firewall  
 [ ] Deploy Windows Server  
 [ ] Configure Active Directory Domain  
@@ -89,51 +90,53 @@ By **building, configuring, and securing** a fully networked environment, this l
 
 <details>
 <summary>Click to expand</summary>
+
 ### 🔹 Splunk SIEM (Free Tier)
 
-[ ] Deploy Splunk Free Edition (500MB/day)  
-[ ] Forward logs from one Windows client  
-[ ] Practice SPL (Search Processing Language)  
-[ ] Replicate Wazuh detections in Splunk  
-[ ] Create basic dashboards and alerts
+- [ ] Deploy Splunk Free Edition (500MB/day)  
+- [ ] Forward logs from one Windows client  
+- [ ] Practice SPL (Search Processing Language)  
+- [ ] Replicate Wazuh detections in Splunk  
+- [ ] Create basic dashboards and alerts
 
 ### 🔹 ELK Stack (Standalone)
 
-[ ] Deploy vanilla ELK (Elasticsearch + Logstash + Kibana)  
-[ ] Forward logs from endpoints or test logs  
-[ ] Create custom ingestion pipelines with Logstash  
-[ ] Visualize data in Kibana  
-[ ] Compare ELK with Wazuh experience
+- [ ] Deploy vanilla ELK (Elasticsearch + Logstash + Kibana)  
+- [ ] Forward logs from endpoints or test logs  
+- [ ] Create custom ingestion pipelines with Logstash  
+- [ ] Visualize data in Kibana  
+- [ ] Compare ELK with Wazuh experience
 
 ### 🔹 Zeek (Bro) Network Monitoring
 
-[ ] Install Zeek on a sensor VM  
-[ ] Send VLAN traffic via mirror or tap interface  
-[ ] Analyze:  
-  [ ] DNS logs  
-  [ ] HTTP logs  
-  [ ] SSL, SSH activity  
-[ ] Forward Zeek logs to ELK or Wazuh
+- [ ] Install Zeek on a sensor VM  
+- [ ] Send VLAN traffic via mirror or tap interface  
+- [ ] Analyze:  
+  - [ ] DNS logs  
+  - [ ] HTTP logs  
+  - [ ] SSL, SSH activity  
+- [ ] Forward Zeek logs to ELK or Wazuh
 
 ### 🔹 Advanced Threat Simulation
 
-[ ] Use MITRE Caldera for red team automation  
-[ ] Write detection rules based on Caldera activity  
-[ ] Map alerts to MITRE ATT&CK Navigator
+- [ ] Use MITRE Caldera for red team automation  
+- [ ] Write detection rules based on Caldera activity  
+- [ ] Map alerts to MITRE ATT&CK Navigator
 
 ### 🔹 Detection Engineering Practice
 
-[ ] Write Sigma rules based on log observations  
-[ ] Convert Sigma to Wazuh/Splunk detection syntax  
-[ ] Build a “Detection Catalog” in GitHub  
-  [ ] Detection name  
-  [ ] Trigger method  
-  [ ] Log source  
-  [ ] Tool used (Wazuh, Splunk, etc.)  
-  [ ] MITRE ID
-</details>
-------
+- [ ] Write Sigma rules based on log observations  
+- [ ] Convert Sigma to Wazuh/Splunk detection syntax  
+- [ ] Build a “Detection Catalog” in GitHub  
+  - [ ] Detection name  
+  - [ ] Trigger method  
+  - [ ] Log source  
+  - [ ] Tool used (Wazuh, Splunk, etc.)  
+  - [ ] MITRE ID
 
+</details>
+
+------
 ## 🚀 **Sections**
 
 1. [**Basic Setup**](https://github.com/alexh200/blue-team-homelab/tree/main/basic-setup/setup.md)
