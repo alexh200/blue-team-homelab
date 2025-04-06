@@ -95,3 +95,7 @@ Right click your newly created GPO and select *Edit*. From here we will transver
 ![local_admins](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/windows_server_setup/local_admins.PNG?raw=true)
 
 In the next section we will create a new Windows host machine and log into our domain with one of the newly created users.
+
+
+
+[**Next Section (Endpoint Deployment)**](https://github.com/alexh200/blue-team-homelab/tree/main/infrastructure_setup/endpoint_deployment.md)
