@@ -34,10 +34,10 @@ By **building, configuring, and securing** a fully networked environment, this l
 
 ### 🔹 Endpoint Deployment
 
-- [ ] Deploy Windows 10/11 Workstations  
-- [ ] Join to Domain  
-- [ ] Create user sessions, simulate real usage  
-- [ ] Install Sysmon + SwiftOnSecurity config  
+✅ Deploy Windows 10/11 Workstations  
+✅ Join to Domain  
+✅ Create user sessions, simulate real usage  
+✅ Install Sysmon + SwiftOnSecurity config  
 
 ### 🔹 SIEM (Wazuh) Setup
 
