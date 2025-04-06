@@ -146,7 +146,7 @@ By **building, configuring, and securing** a fully networked environment, this l
 	*  [**VLAN and Firewall Setup**](https://github.com/alexh200/blue-team-homelab/tree/main/infrastructure_setup/vlan_firewall_setup.md)
 	*  [**Windows Server Setup**](https://github.com/alexh200/blue-team-homelab/tree/main/infrastructure_setup/windows_server_setup.md)
 	
-2. **[Endpoint Deployment**](https://github.com/alexh200/blue-team-homelab/tree/main/infrastructure_setup/endpoint_deployment.md)
+2. [**Endpoint Deployment**](https://github.com/alexh200/blue-team-homelab/tree/main/infrastructure_setup/endpoint_deployment.md)
 ------
 
 This project is a **continuous work in progress**, evolving as new tools and techniques are added. Feel free to explore, contribute, and test your own security skills!
