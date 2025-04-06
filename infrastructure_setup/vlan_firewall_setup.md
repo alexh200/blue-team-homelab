@@ -1,4 +1,4 @@
-# Basic Setup**
+# Basic Setup
 
 ## 🔹 Hardware
 
@@ -152,4 +152,6 @@ pfSense will be our firewall of choice as it can easily be configured through a 
      For the Corporate LAN, we want traffic to and from the fake internet to simulate attacks.
 
 
-[**1. Next Section (Windows Server Setup)**](https://github.com/alexh200/blue-team-homelab/tree/main/infrastructure_setup/windows_server_setup.md)
+
+
+[**Next Section (Windows Server Setup)**](https://github.com/alexh200/blue-team-homelab/tree/main/infrastructure_setup/windows_server_setup.md)
