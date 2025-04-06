@@ -1,4 +1,4 @@
-# **Part 1: Basic Setup**
+# Basic Setup**
 
 ## 🔹 Hardware
 
@@ -22,7 +22,7 @@ Here is a list of things that will be used:
 
 Lastly for this section we will be following this topology:
 
-![topology map](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/topology.png?raw=true)
+![topology map](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/topology.png?raw=true)
 
 **Management Network** (<u>VLAN 1</u>) - This will be used to configure critical security infrastructure.
 
@@ -48,11 +48,11 @@ To create these VLANs in our virtual network, we will be creating networks withi
 
    Make sure that all of these are set to host-only as we want to create our own virtual private network. We also want to uncheck use local DHCP service since we will have a DHCP server on our firewall and a windows server machine that will handle ip addressing. This is what our current configuration should look like:
 
-   ![virtual network editor](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/network_editor.png?raw=true)
+   ![virtual network editor](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/network_editor.png?raw=true)
    
 ---
 
-# **Part 2: Firewall Setup**
+# **Firewall Setup**
 
 
 ## 🔹 pfSense
@@ -75,7 +75,7 @@ pfSense will be our firewall of choice as it can easily be configured through a 
 
 2. Once all of the hardware settings are setup, go ahead and power the VM on and accept the defaults for the installation. Once rebooted, this is what we see with two interfaces (LAN and WAN):
 
-   ![pfsense installation](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/pfsense_install.PNG?raw=true)
+   ![pfsense installation](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/pfsense_install.PNG?raw=true)
 
    
 
@@ -83,7 +83,7 @@ pfSense will be our firewall of choice as it can easily be configured through a 
 
 3. We should now be able to access the pfSense admin panel by simply typing in the address of the firewall on our host machine. We are greeted with a sign in page and the default credentials are username: **admin**, password: **pfsense**. After logging in this is what you should see:
 
-   ![pfsense installation](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/pfsense_welcome.PNG?raw=true)
+   ![pfsense installation](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/pfsense_welcome.PNG?raw=true)
 
 ## 🔹 Configuration
 
@@ -109,9 +109,9 @@ pfSense will be our firewall of choice as it can easily be configured through a 
    | CORPORATE_SECURITY_VLAN20             | 10.0.20.254/24           |
    | CORPORATE_WAN_VLAN30 (Hacker Network) | 10.0.30.254/24           |
 
-![pfsense interfaces](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/pfsense_interfaces.PNG?raw=true)
+![pfsense interfaces](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/pfsense_interfaces.PNG?raw=true)
 
-![pfsense interfaces](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/pfsense_interfaces_2.PNG?raw=true)
+![pfsense interfaces](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/pfsense_interfaces_2.PNG?raw=true)
 
 3. We should also go through the general setup (*System -> General Setup*) to configure our hostname and a couple of other things:
    * **Hostname**: Change to whatever you like (I used firewall).
@@ -123,31 +123,33 @@ pfSense will be our firewall of choice as it can easily be configured through a 
 
    * **WAN Interface**:
 
-     ![pfsense wan_interface](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/wan_interface.PNG?raw=true)
+     ![pfsense wan_interface](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/wan_interface.PNG?raw=true)
 
      We are allowing all traffic for now but may edit this later
 
    * **MANAGEMENT Interface**:
 
-     ![pfsense management_interface](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/management_interface.PNG?raw=true)
+     ![pfsense management_interface](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/management_interface.PNG?raw=true)
 
      We currently only have one host in the management VLAN so we can keep the rules default. Ideally only one specific IP or host would be allowed to configure something like a firewall. I have disabled the IPv6 rule.
 
    * **CORPORATE WAN**:
    
-     ![pfsense management_interface](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/corporate_wan_firewall.PNG?raw=true)
+     ![pfsense management_interface](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/corporate_wan_firewall.PNG?raw=true)
    
      For the corporate WAN, we are allowing any traffic in and allowing traffic to be sent to any Corporate Network address. We will have a deny all rule at the bottom to reject any other traffic. By default there is a default deny all rule that is invisible, but we will add that rule just to be safe.
    
    * **CORPORATE SECURITY**:
    
-     ![pfsense management_interface](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/corporate_security_firewall.PNG?raw=true)
+     ![pfsense management_interface](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/corporate_security_firewall.PNG?raw=true)
    
      The Corporate Security should only have access to the Internet and the Corporate LAN.
    
    * **CORPORATE LAN**:
    
-     ![pfsense management_interface](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/corporate_lan_firewall.PNG?raw=true)
+     ![pfsense management_interface](https://github.com/alexh200/blue-team-homelab/blob/main/infrastructure_setup/images/vlan_firewall_setup/corporate_lan_firewall.PNG?raw=true)
    
      For the Corporate LAN, we want traffic to and from the fake internet to simulate attacks.
 
+
+[**1. Next Section (Windows Server Setup)**](https://github.com/alexh200/blue-team-homelab/tree/main/infrastructure_setup/windows_server_setup.md)
